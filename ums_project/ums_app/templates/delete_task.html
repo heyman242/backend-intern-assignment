@@ -1,0 +1,15 @@
+<!-- delete_task.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Task</title>
+</head>
+<body>
+    <h1>Delete Task</h1>
+    <p>Are you sure you want to delete this task?</p>
+    <form method="post" action="{% url 'delete_task' task_id %}">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>

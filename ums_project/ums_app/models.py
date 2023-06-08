@@ -10,6 +10,7 @@ class Task(models.Model):
     )
 
     title = models.CharField(max_length=255)
+    id = models.AutoField(primary_key=True)
     description = models.TextField()
     due_date = models.DateField()
     status = models.CharField(max_length=20, choices=STATUS_CHOICES)
