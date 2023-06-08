@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Task
 from .serializers import TaskSerializer
+from django.core.paginator import Paginator
 
 
 def create_task(request):
@@ -13,7 +14,11 @@ def create_task(request):
         serializer = TaskSerializer()
 
     tasks = Task.objects.all()
-    return render(request, 'create_task.html', {'serializer': serializer, 'tasks': tasks})
+    paginator = Paginator(tasks, 5)  # Set the number of tasks per page
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'create_task.html', {'serializer': serializer, 'tasks': tasks, 'page_obj': page_obj})
 
 
 def update_task(request, task_id):
