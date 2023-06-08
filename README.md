@@ -14,35 +14,35 @@ To set up and run the application locally, follow these steps:
 
 1. **Clone the repository:** Start by cloning this GitHub repository to your local machine using the following command:
 
-git clone git@github.com:heyman242/backend-intern-assignment.git
+``` git clone git@github.com:heyman242/backend-intern-assignment.git```
   
 2. Navigate to the project directory:
 
- cd ums_project
+ ```cd ums_project```
 
 3. **Create a virtual environment:** It is recommended to use a virtual environment to keep the project dependencies isolated. Create a new virtual environment by running the following command:
 
- python3 -m venv env
+ ``` python3 -m venv env ```
 
 4. Activate the virtual environment:
 
- source env/bin/activate (for macos / linux)
- .\env\Scripts\activate (for windows)
+ ```source env/bin/activate (for macos / linux)```
+ ```.\env\Scripts\activate (for windows)```
 
 5. **Install dependencies:** Install the project dependencies listed in the requirements.txt file by running the following command:
 
- pip install -r requirements.txt
+ ```pip install -r requirements.txt```
 
 6. **Run database migrations:** Apply the database migrations to set up the necessary database schema. Run the following command:
 
- python3 manage.py makemigrations
- python3 manage.py migrate
+ ```python3 manage.py makemigrations```
+ ```python3 manage.py migrate```
 
 7. **Start the development server:** Start the Django development server by running the following command:
 
- python3 manage.py runserver
+ ```python3 manage.py runserver```
 
-8. **Access the application: Open a web browser and navigate to http://localhost:8000/tasks or http://127.0.0.1:8000/tasks to access the Task Management Application.
+8. **Access the application: Open a web browser and navigate to ```http://localhost:8000/tasks``` or ```http://127.0.0.1:8000/tasks``` to access the Task Management Application.
 
 Usage
 Create a new task by filling in the title, description, due date, and selecting the status. Click the "Create" button to add the task.
